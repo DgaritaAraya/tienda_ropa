@@ -1,0 +1,460 @@
+*-- SCRIPT DE LA BASE DE DATOS DE TIENDA DE ROPA --* 
+
+----
+
+
+CREATE DATABASE tienda_ropa;
+
+---------
+
+
+** TABLA 'proveedor' **
+
+
+CREATE TABLE `proveedor` (
+  `id_proveedor` int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  `nombre_proveedor` varchar(35) NOT NULL,
+  `direccion` varchar(40) NOT NULL,
+  `correo_proveedor` varchar(50) NOT NULL
+);
+
+-------------------------DATOS INSERTADOS-----------------------
+
+-- 1
+
+INSERT INTO `proveedor` (`id_proveedor`, `nombre_proveedor`, `direccion`, `correo_proveedor`) VALUES
+(3040, 'Siempre Extremos', 'Avenida 14, costado norte del mall Paseo de las Flores', 'SiempreExtremos@ventas.es');
+
+
+-- 2 
+
+INSERT INTO `proveedor` (`id_proveedor`, `nombre_proveedor`, `direccion`, `correo_proveedor`) VALUES (2638, 'Estilo Único', ' calle 08, frente el walmart de Alajuela centro', 'estilounico@gmail.com');
+
+-- 3
+
+INSERT INTO `proveedor` (`id_proveedor`, `nombre_proveedor`, `direccion`, `correo_proveedor`) VALUES (9043, 'New Outfit', ' Cartago Centro, dentro del Centro Comercial el Dome, local 12', 'outfitsdomo@yahoo.com');
+
+-- 4
+
+INSERT INTO `proveedor` (`id_proveedor`, `nombre_proveedor`, `direccion`, `correo_proveedor`) VALUES (1479, 'Tecorfil', ' Costado oeste del salon comunal de Liberia, Plaza comercial Sol Naciente', 'productos@tecorfil.cr');
+
+-- 5
+
+INSERT INTO `proveedor` (`id_proveedor`, `nombre_proveedor`, `direccion`, `correo_proveedor`) VALUES (3572, 'Moda Elegante', 'Calle Principal 123, Cartago, Central Oreamuno', 'contacto@modaelegante.com');
+
+-- 6
+
+INSERT INTO `proveedor` (`id_proveedor`, `nombre_proveedor`, `direccion`, `correo_proveedor`) VALUES (7782, 'Ropa Urbana', 'Avenida del Sol 45, Nueva Ciudad', 'info@ropaurbana.com');
+
+-- 7
+
+INSERT INTO `proveedor` (`id_proveedor`, `nombre_proveedor`, `direccion`, `correo_proveedor`) VALUES (4893, 'Estilo & Glamour', 'Boulevard Moda 67, Metropolis', 'ventas@estiloglamour.com');
+
+-- 8
+
+INSERT INTO `proveedor` (`id_proveedor`, `nombre_proveedor`, `direccion`, `correo_proveedor`) VALUES (6581, 'Tendencias Actuales', 'Plaza del Comercio 89, Pueblo Nuevo', 'contacto@tendenciasactuales.com');
+
+-- 9
+
+INSERT INTO `proveedor` (`id_proveedor`, `nombre_proveedor`, `direccion`, `correo_proveedor`) VALUES (8345, 'Moda Vintage', 'Calle Antiguo 12, Vieja Ciudad', 'info@modavintage.com');
+
+
+
+--///-----------------------------------------------------------------------------///---
+
+** TABLA 'marca' **
+
+
+CREATE TABLE `marca` (
+  `id_marca` int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL ,
+  `id_proveedor` int(11) NOT NULL,
+  `nombre_marca` varchar(50) NOT NULL,
+  `pais` varchar(50) NOT NULL
+  );
+
+------------------------------DATOS INSERTADOS-----------------------
+
+-- 1
+
+INSERT INTO `marca` (`id_marca`, `id_proveedor`, `nombre_marca`, `pais`) VALUES
+(041, 3040, 'Adidas', 'Alemania');
+
+-- 2
+
+INSERT INTO `marca` (`id_marca`, `id_proveedor`, `nombre_marca`, `pais`) VALUES (236, 1479, 'H&M', 'Suecia');
+
+-- 3
+
+INSERT INTO `marca` (`id_marca`, `id_proveedor`, `nombre_marca`, `pais`) VALUES (542, 3572, 'Uniqlo', 'Japon');
+
+-- 4
+
+INSERT INTO `marca` (`id_marca`, `id_proveedor`, `nombre_marca`, `pais`) VALUES (831, 7782, 'Burberry', 'Reino Unido');
+
+-- 5
+
+INSERT INTO `marca` (`id_marca`, `id_proveedor`, `nombre_marca`, `pais`) VALUES (368, 4893, 'Levis', 'Estados Unidos');
+
+-- 6
+
+INSERT INTO `marca` (`id_marca`, `id_proveedor`, `nombre_marca`, `pais`) VALUES (926, 6581, 'Nike', 'Estados Unidos');
+
+-- 7
+
+INSERT INTO `marca` (`id_marca`, `id_proveedor`, `nombre_marca`, `pais`) VALUES (193, 8345, 'Prada', 'Italia');
+
+
+
+
+---///-----------------------------------------------------------------------------///---
+
+** TABLA 'prenda' **
+
+CREATE TABLE `prenda` (
+  `id_prenda` int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  `id_marca` int(11) NOT NULL,
+  `nombre_prenda` varchar(50) NOT NULL,
+  `descripcion` varchar(100) NOT NULL,
+  `color` varchar(20) NOT NULL,
+  `talla` varchar(20) NOT NULL,
+  `precio` decimal(15,3) NOT NULL	
+  );
+
+
+-----------------------------DATOS INSERTADOS-----------------------
+
+-- 1
+
+INSERT INTO `prenda` (`id_prenda`, `id_marca`, `nombre_prenda`, `descripcion`, `color`, `talla`, `precio`) VALUES (12, 041, 'Pantalón Deportivo SST Bonded', 'El equilibrio perfecto entre comodidad y estilo, este pantalón deportivo adidas es una adición perfecta a tu guardarropas. Los puños acanalados y el corte clásico ofrecen un ajuste no muy ajustado pero tampoco muy holgado en un tejido plano suave.', 'negro', 'S', 1.500); 
+
+-- 2
+
+INSERT INTO `prenda` (`id_prenda`, `id_marca`, `nombre_prenda`, `descripcion`, `color`, `talla`, `precio`) VALUES (57, 236, 'Chaqueta en mezcla de lana', 'Chaqueta en mezcla de lana con cuello redondo y frente cruzado con botón arriba. Modelo de corte holgado con bolsillos discretos en las costuras laterales. Forrada.', 'Gris Jaspeado', 'M', 159000); 
+
+-- 3
+
+INSERT INTO `prenda` (`id_prenda`, `id_marca`, `nombre_prenda`, `descripcion`, `color`, `talla`, `precio`) VALUES (96, 542, 'Camison Overside', 'Camisa acolchanada con correo agustable y diseñada para bridar comodidad durante el día y la noche. Exclusivo tanto para hombre y mujer', 'Verde Oliva', 'Sin talla', 19000);
+
+-- 4
+
+INSERT INTO `prenda` (`id_prenda`, `id_marca`, `nombre_prenda`, `descripcion`, `color`, `talla`, `precio`) VALUES (30, 831, 'Camisa de Vestir', 'Deslumbra de forma glamurosa con la parte de abajo See Me de Lovers + Friends. Diseñado para no pasar desapercibido, el estilo de talle alto presenta lados fruncidos que mejoran aún más tus curvas y delicados encajes transparentes con adornos de cristal que brillan maravillosamente en el agua pura.','Salt', 'L', 37699);
+
+-- 5
+
+INSERT INTO `prenda` (`id_prenda`, `id_marca`, `nombre_prenda`, `descripcion`, `color`, `talla`, `precio`) VALUES (82, 368, 'Jeans 501', ' Y nunca lo harán. Estos jeans 501 de inspiración vintage están diseñados con una pernera ajustada clásica, un fit recto en el trasero y en los muslos y el estilo emblemático que te encanta.','Gris-azulado con ligeros toques de blanco', '32', 60700);
+
+-- 6
+
+INSERT INTO `prenda` (`id_prenda`, `id_marca`, `nombre_prenda`, `descripcion`, `color`, `talla`, `precio`) VALUES (45, 926, 'Nike x Jacquemus', 'Actualiza tu look de pantalón de chándal con este elegante pantalón de tejido Fleece. El logotipo Swoosh por toda la prenda incluye perforaciones precisas con láser y bordes suaves que resisten el desgaste. Llévalo solo o por encima de otra prenda para conseguir el look sutil o llamativo que te gusta','Rosado Salmon', 'XL',155630);
+
+-- 7
+
+INSERT INTO `prenda` (`id_prenda`, `id_marca`, `nombre_prenda`, `descripcion`, `color`, `talla`, `precio`) VALUES (28, 193, 'Vestido de georgette bordado', 'La elegancia del pasado inspira este vestido de georgette, que establece un diálogo entre la ligera silueta estilo años 20 y los delicados adornos de inspiración retro,  con una exquisita elaboración artesanal para conseguir un efecto contemporáneo.','Marrón Chocolate', 'XS',71000);
+
+
+--///------------------------------------------------------------------------------///---
+
+** TABLA inventario **
+
+CREATE TABLE `inventario` (
+  `id_inventario` int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  `id_prenda` int(11) NOT NULL,
+  `id_proveedor` int(11) NOT NULL,
+  `cant_en_stock` int(20) NOT NULL,
+  `fecha_de_recibo` date NOT NULL
+   ); 
+
+
+--------------------------------DATOS INSERTADOS-----------------------
+
+-- 1
+
+INSERT INTO `inventario` (`id_inventario`, `id_prenda`, `id_proveedor`, `cant_en_stock`, `fecha_de_recibo`) VALUES (593, 12, 3040, 57, '2024-10-05');
+
+-- 2
+
+INSERT INTO `inventario` (`id_inventario`, `id_prenda`, `id_proveedor`, `cant_en_stock`, `fecha_de_recibo`) VALUES (001, 57, 1479, 20, '2023-12-15');
+
+-- 3
+
+INSERT INTO `inventario` (`id_inventario`, `id_prenda`, `id_proveedor`, `cant_en_stock`, `fecha_de_recibo`) VALUES (052, 96, 3572, 4, '2024-06-01');
+
+--4
+
+INSERT INTO `inventario` (`id_inventario`, `id_prenda`, `id_proveedor`, `cant_en_stock`, `fecha_de_recibo`) VALUES (006, 30, 7782, 100, '2023-10-05');
+
+-- 5
+
+INSERT INTO `inventario` (`id_inventario`, `id_prenda`, `id_proveedor`, `cant_en_stock`, `fecha_de_recibo`) VALUES (027, 82, 4893, 39, '2024-09-30');
+
+-- 6
+
+INSERT INTO `inventario` (`id_inventario`, `id_prenda`, `id_proveedor`, `cant_en_stock`, `fecha_de_recibo`) VALUES (088, 45, 6581, 8, '2024-01-13');
+
+-- 7
+
+INSERT INTO `inventario` (`id_inventario`, `id_prenda`, `id_proveedor`, `cant_en_stock`, `fecha_de_recibo`) VALUES (009, 28, 8345, 52, '2024-05-03');
+
+
+
+--///-----------------------------------------------------------------------------///---
+
+** TABLA cliente **
+
+CREATE TABLE `cliente` (
+  `id_cliente` int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  `nombre_cliente` varchar(35) NOT NULL,
+  `apellidos_cliente` varchar(50) NOT NULL,
+  `correo` varchar(50) NOT NULL,
+  `telefono` int(10) NOT NULL,
+  `direccion` varchar(100) NOT NULL
+);
+
+-----------------------------DATOS INSERTADOS-----------------------
+
+-- 1
+
+INSERT INTO `cliente` (`id_cliente`, `nombre_cliente`, `apellidos_cliente`, `correo`, `telefono`,`direccion` ) VALUES (305810963, 'Karol', 'Calderon Zuñiga', 'kacalzu@gmail.com', 60892475, 'Cartago, Oreamuno, San Rafael');
+
+-- 2
+
+INSERT INTO `cliente` (`id_cliente`, `nombre_cliente`, `apellidos_cliente`, `correo`, `telefono`,`direccion` ) VALUES (302350969, 'Diana', 'Perez Solis', 'perdiana@gmail.com', 60892351,'Heredia, Belen, San Joaquin');
+
+-- 3
+
+INSERT INTO `cliente` (`id_cliente`, `nombre_cliente`, `apellidos_cliente`, `correo`, `telefono`,`direccion` ) VALUES (401010308, 'Sergio','Torres Vega', 'seveto@hotmail.com', 81336987, ' San Jose, Desaparados, San Miguel');
+
+-- 4
+
+INSERT INTO `cliente` (`id_cliente`, `nombre_cliente`, `apellidos_cliente`, `correo`, `telefono`,`direccion` ) VALUES (203910764, 'Maria', 'Lorenzo Fuentes', 'fuenteslo@gmail.com',75143696, 'Alajuela, Atenas, Mercedes');
+
+-- 5
+
+INSERT INTO `cliente` (`id_cliente`, `nombre_cliente`, `apellidos_cliente`, `correo`, `telefono`,`direccion` ) VALUES (306120718, 'Rodolfo', 'Loria Salas', 'rolosa@yahoo.es', 82100301, 'Guanacaste, Tilarán, Santa Rosa');
+
+-- 6
+
+INSERT INTO `cliente` (`id_cliente`, `nombre_cliente`, `apellidos_cliente`, `correo`, `telefono`,`direccion` ) VALUES (603840913, 'Luisa', 'Carrillo Viquez', 'viquezlu@gmail.com', 82411489, 'Puntarenas, Esparza, Caldera');
+
+-- 7
+
+INSERT INTO `cliente` (`id_cliente`, `nombre_cliente`, `apellidos_cliente`, `correo`, `telefono`,`direccion` ) VALUES (70552016, 'Adrian', 'Hernandez Brenes', 'hernabrean@hotmail.com', 82352642, 'Limon, Siquirres, Florida');
+
+
+--///------------------------------------------------------------------------------///---
+
+** TABLA venta_final **
+
+CREATE TABLE `venta_final` (
+  `id_venta` int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  `id_cliente` int(11) NOT NULL,
+  `id_detalle_venta` int(11) NOT NULL,
+  `fecha_venta_final` date NOT NULL,
+  `total_venta` decimal(15, 3) NOT NULL
+);
+
+-------------------------------DATOS INSERTADOS-----------------------
+
+-- 1
+
+INSERT INTO `venta_final` (`id_venta`, `id_cliente`, `id_detalle_venta`, `fecha_venta_final`, `total_venta` ) VALUES ('01', 305810963, 20, '2023-12-13', 25000);
+
+-- 2
+
+INSERT INTO `venta_final` (`id_venta`, `id_cliente`, `id_detalle_venta`, `fecha_venta_final`, `total_venta` ) VALUES (1001, 302350969, 10, '2024-06-12', 318000);
+
+-- 3
+
+INSERT INTO `venta_final` (`id_venta`, `id_cliente`, `id_detalle_venta`, `fecha_venta_final`, `total_venta` ) VALUES (1002, 401010308, 20, '2021-12-30', 28500);
+
+-- 4
+
+INSERT INTO `venta_final` (`id_venta`, `id_cliente`, `id_detalle_venta`, `fecha_venta_final`, `total_venta` ) VALUES (1003, 203910764, 33, '2024-03-18', 188495);
+
+-- 5
+
+INSERT INTO `venta_final` (`id_venta`, `id_cliente`, `id_detalle_venta`, `fecha_venta_final`, `total_venta` ) VALUES (1004, 306120718, 40, '2020-08-07', 182100);
+
+-- 6
+
+INSERT INTO `venta_final` (`id_venta`, `id_cliente`, `id_detalle_venta`, `fecha_venta_final`, `total_venta` ) VALUES (1005, 603840913, 50, '2023-11-29', 1245040);
+
+-- 7
+
+INSERT INTO `venta_final` (`id_venta`, `id_cliente`, `id_detalle_venta`, `fecha_venta_final`, `total_venta` ) VALUES (1006, 70552016, 60, '2024-02-03', 1633000);
+
+
+--///------------------------------------------------------------------------------///---
+
+** TABLA detalle_venta **
+
+CREATE TABLE `Detalle_venta` (
+  `id_detalle_venta` int(11) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+  `id_prenda` int(11) NOT NULL,
+  `cantidad` int(20) NOT NULL
+);
+
+
+---------------------------DATOS INSERTADOS-----------------------
+
+
+-- 1
+
+INSERT INTO `Detalle_venta` (`id_detalle_venta`, `id_prenda`, `cantidad`) VALUES (20, 12, 25);
+
+-- 2
+
+INSERT INTO `Detalle_venta` (`id_detalle_venta`, `id_prenda`, `cantidad`) VALUES (10, 57, 2);
+
+-- 3
+
+INSERT INTO `Detalle_venta` (`id_detalle_venta`, `id_prenda`, `cantidad`) VALUES (22, 96, 15);
+
+-- 4
+
+INSERT INTO `Detalle_venta` (`id_detalle_venta`, `id_prenda`, `cantidad`) VALUES (33, 30, 5);
+
+-- 5
+
+INSERT INTO `Detalle_venta` (`id_detalle_venta`, `id_prenda`, `cantidad`) VALUES (40, 82, 3);
+
+-- 6
+
+INSERT INTO `Detalle_venta` (`id_detalle_venta`, `id_prenda`, `cantidad`) VALUES (50, 45, 8);
+
+-- 7
+
+INSERT INTO `Detalle_venta` (`id_detalle_venta`, `id_prenda`, `cantidad`) VALUES (60, 28, 23);
+
+
+
+
+--//-------------------------------------------------------------------------------///---
+
+
+
+--///--------------LLAVES FORANEAS-----------///---
+
+
+--1. LLAVE FORANEA "id_proveedor" EN TABLA "marca"
+
+ALTER TABLE `marca`
+  ADD CONSTRAINT `fk_id_proveedor` FOREIGN KEY (`id_proveedor`) REFERENCES `proveedor` (`id_proveedor`);
+
+**-------------------------------------------------------------------------------------**
+
+--2. LLAVE FORANEA "id_marca" EN TABLA "prenda"
+
+ALTER TABLE `prenda` 
+   ADD CONSTRAINT `fk_id_marca` FOREIGN KEY (`id_marca`) REFERENCES `marca` (`id_marca`);
+
+**-------------------------------------------------------------------------------------**
+
+--3. LLAVE FORANEA "id_prenda" EN TABLA "inventario"
+
+ALTER TABLE `inventario`
+   ADD CONSTRAINT `fk_prenda` FOREIGN KEY (`id_prenda`) REFERENCES `prenda` (`id_prenda`);
+
+**-------------------------------------------------------------------------------------**
+
+*--4. LLAVE FORANEA "id_proveedor" EN TABLA "inventario"
+    
+ALTER TABLE `inventario`
+   ADD CONSTRAINT `fk_proveedor_id` FOREIGN KEY (`id_proveedor`) REFERENCES `proveedor` (`id_proveedor`);
+
+**-------------------------------------------------------------------------------------**
+
+--5. LLAVE FORANEA "id_prenda" EN LA TABLA "detalle_venta"
+
+ALTER TABLE `detalle_venta`
+   ADD CONSTRAINT `id_prenda` FOREIGN KEY (`id_prenda`) REFERENCES `prenda` (`id_prenda`);
+
+**-------------------------------------------------------------------------------------**
+
+--6. LLAVE FORANEA "id_cliente" EN LA TABLA "venta_final"
+
+ALTER TABLE `venta_final` 
+   ADD CONSTRAINT `id_cliente` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id_cliente`);
+
+**-------------------------------------------------------------------------------------**
+
+--7. LLAVE FORANEA "id_detalle_venta" EN LA TABLA "venta_final"
+
+ALTER TABLE `venta_final`
+  ADD CONSTRAINT `id_detalle_venta` FOREIGN KEY (`id_detalle_venta`) REFERENCES `detalle_venta` (`id_detalle_venta`);
+
+
+
+
+*** ---------------------- LISTA DE CONSULTAS ------------------ ***
+
+
+
+-- 1. ELIMINACIÓN DE DATOS 
+
+DELETE FROM proveedor WHERE id_proveedor = 2638; 
+
+
+//-------------------------------------------------------------------------------------//
+
+
+-- 2. ACTUALIZACION DE DATOS 
+
+
+UPDATE proveedor SET direccion = 'San Roque de barba de Heredia' WHERE id_proveedor = 9043;
+
+//-------------------------------------------------------------------------------------//
+
+-- 3. CONSULTA DE CANTIDAD DE PRENDAS VENDIDAS POR FECHA 
+
+
+SELECT vf.fecha_venta_final, p.nombre_prenda, SUM(dv.cantidad) AS cantidad_vendida
+FROM venta_final vf
+JOIN detalle_venta dv ON vf.id_detalle_venta = dv.id_detalle_venta
+JOIN prenda p ON dv.id_prenda = p.id_prenda
+WHERE vf.fecha_venta_final = '2023-11-29'  
+GROUP BY vf.fecha_venta_final, p.nombre_prenda;
+
+
+
+
+*** ------------------------- VISTAS ------------------ ***
+
+
+-- 1. LISTA DE MARCAS QUE TIENEN REGISTRO DE UNA VENTA --
+
+CREATE VIEW MarcasConVentas AS
+SELECT DISTINCT m.nombre_marca
+FROM marca m
+JOIN prenda p ON m.id_marca = p.id_marca
+JOIN detalle_venta dv ON p.id_prenda = dv.id_prenda;
+
+
+//-------------------------------------------------------------------------------------//
+
+
+-- 2. LISTA DE PRENDAS VENDIDAS Y CANTIDAD EN STOCK -- !!!!!!!!!
+
+CREATE VIEW PrendasVendidasYStock AS
+SELECT p.nombre_prenda, SUM(dv.cantidad) AS cantidad_vendida, i.cant_en_stock
+FROM prenda p
+JOIN detalle_venta dv ON p.id_prenda = dv.id_prenda
+JOIN inventario i ON p.id_prenda = i.id_prenda
+GROUP BY p.nombre_prenda, i.cant_en_stock;
+
+
+//-------------------------------------------------------------------------------------//
+
+
+-- 3. LISTA DE LAS 5 MARCAS MAS VENDIDAS Y LA CANTIDAD DE VENTAS --
+
+CREATE VIEW Top5MarcasMasVendidas AS
+SELECT m.nombre_marca, SUM(dv.cantidad) AS total_ventas
+FROM marca m
+JOIN prenda p ON m.id_marca = p.id_marca
+JOIN detalle_venta dv ON p.id_prenda = dv.id_prenda
+GROUP BY m.nombre_marca
+ORDER BY total_ventas DESC
+LIMIT 5;
+
+
