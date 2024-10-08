@@ -46,7 +46,7 @@ La función de dicho proyecto será crear una base de datos donde se visualize t
 
 Lo siguiente es una explicación detallada de lo que será la base de datos de dicho proyecto, en el cual se desglosa el contenido de cada una de las tablas, se identifica sus llames y primarias y también cada una de las relaciones que hay entre algunas tablas, esto con el fin de que la base de datos sea funcional.  Además, al final de la explicación se muestra una imagen del resultado final, es decir la estructura de la base de datos. 
 
-## BASE DE DATOS
+### BASE DE DATOS
 
 
 **1. Tabla Proveedor:**
