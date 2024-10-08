@@ -16,7 +16,7 @@
 ----
 
 
-**DESCRIPCIÓN DEL PROYECTO**
+## DESCRIPCIÓN DEL PROYECTO 
 
 El siguiente proyecto se basa en crear una base de datos enfocada en una tienda da ropa. En dicha base de datos se van a almacenar toda la información referente a la venta y compra de las prendas tanto femenina como masculina.
 
