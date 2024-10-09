@@ -58,9 +58,49 @@ INSERT INTO `proveedor` (`id_proveedor`, `nombre_proveedor`, `direccion`, `corre
 
 INSERT INTO `proveedor` (`id_proveedor`, `nombre_proveedor`, `direccion`, `correo_proveedor`) VALUES (8345, 'Moda Vintage', 'Calle Antiguo 12, Vieja Ciudad', 'info@modavintage.com');
 
+-- 10
+
+INSERT INTO `proveedor` (`id_proveedor`, `nombre_proveedor`, `direccion`, `correo_proveedor`) VALUES (2468, 'Distribuidora Vogue', 'Zona Industrial 12', 'ventas@vogue.com');
+
+-- 11
+
+INSERT INTO `proveedor` (`id_proveedor`, `nombre_proveedor`, `direccion`, `correo_proveedor`) VALUES (6981, 'Inditex', 'Calle Secundaria 45', 'contacto@inditex.com');
+
+--12 
+
+INSERT INTO `proveedor` (`id_proveedor`, `nombre_proveedor`, `direccion`, `correo_proveedor`) VALUES (1234, 'Proveedor Moda', 'Av. Principal 123', 'contacto@moda.com');
+
+-- 13 
+
+INSERT INTO `proveedor` (`id_proveedor`, `nombre_proveedor`, `direccion`, `correo_proveedor`) VALUES (2254, 'H&M Group', 'Karlavägen 100, Estocolmo', 'info@hm.com');
+
+-- 14
+
+INSERT INTO `proveedor` (`id_proveedor`, `nombre_proveedor`, `direccion`, `correo_proveedor`) VALUES (2477, 'Nike Inc.', 'One Bowerman Dr, Beaverton', 'ventas@nike.com');
+
+-- 15
+
+INSERT INTO `proveedor` (`id_proveedor`, `nombre_proveedor`, `direccion`, `correo_proveedor`) VALUES (2488, 'Adidas Group', 'Adi-Dassler-Strasse 1, Herzogenaurach', 'info@adidas-group.com');
+
+-- 16 
+
+INSERT INTO `proveedor` (`id_proveedor`, `nombre_proveedor`, `direccion`, `correo_proveedor`) VALUES (2498, 'LVMH', '22 Avenue Montaigne, París', 'ventas@lvmh.com');
+
+-- 17
+
+INSERT INTO `proveedor` (`id_proveedor`, `nombre_proveedor`, `direccion`, `correo_proveedor`) VALUES (2499, 'Fast Retailing', '10717-1 Sayama, Yamaguchi, Japón', 'info@fastretailing.com');
+
+-- 18 
+
+INSERT INTO `proveedor` (`id_proveedor`, `nombre_proveedor`, `direccion`, `correo_proveedor`) VALUES (2500, 'PVH Corp.', '200 Madison Ave, Nueva York', 'contacto@pvh.com');
+
+-- 19 
+
+INSERT INTO `proveedor` (`id_proveedor`, `nombre_proveedor`, `direccion`, `correo_proveedor`) VALUES (2501, 'Kering', '40 Rue de Sèvres, París', 'ventas@kering.com');
 
 
 --///-----------------------------------------------------------------------------///---
+
 
 ** TABLA 'marca' **
 
@@ -103,7 +143,37 @@ INSERT INTO `marca` (`id_marca`, `id_proveedor`, `nombre_marca`, `pais`) VALUES 
 
 INSERT INTO `marca` (`id_marca`, `id_proveedor`, `nombre_marca`, `pais`) VALUES (193, 8345, 'Prada', 'Italia');
 
+-- 8
 
+INSERT INTO `marca` (`id_marca`, `id_proveedor`, `nombre_marca`, `pais`) VALUES (215, 6981, 'Zara', 'España');
+
+-- 9
+
+INSERT INTO `marca` (`id_marca`, `id_proveedor`, `nombre_marca`, `pais`) VALUES (216, 6981, 'Massimo Dutti', 'España');
+
+-- 10 
+
+INSERT INTO `marca` (`id_marca`, `id_proveedor`, `nombre_marca`, `pais`) VALUES (217, 2254, 'H&M', 'Suecia');
+
+-- 11 
+
+INSERT INTO `marca` (`id_marca`, `id_proveedor`, `nombre_marca`, `pais`) VALUES (218, 2254, 'COS', 'Suecia');
+
+-- 12
+
+INSERT INTO `marca` (`id_marca`, `id_proveedor`, `nombre_marca`, `pais`) VALUES (219, 2498, 'Louis Vuitton', 'Francia');
+
+-- 13
+
+INSERT INTO `marca` (`id_marca`, `id_proveedor`, `nombre_marca`, `pais`) VALUES (220, 2498, 'Fendi', 'Italia');
+
+-- 14
+
+INSERT INTO `marca` (`id_marca`, `id_proveedor`, `nombre_marca`, `pais`) VALUES (221, 2488, 'Adidas', 'Alemania');
+
+-- 15 
+
+INSERT INTO `marca` (`id_marca`, `id_proveedor`, `nombre_marca`, `pais`) VALUES (222, 2500, 'Calvin Klein', 'Estados Unidos');
 
 
 ---///-----------------------------------------------------------------------------///---
@@ -151,6 +221,26 @@ INSERT INTO `prenda` (`id_prenda`, `id_marca`, `nombre_prenda`, `descripcion`, `
 
 INSERT INTO `prenda` (`id_prenda`, `id_marca`, `nombre_prenda`, `descripcion`, `color`, `talla`, `precio`) VALUES (28, 193, 'Vestido de georgette bordado', 'La elegancia del pasado inspira este vestido de georgette, que establece un diálogo entre la ligera silueta estilo años 20 y los delicados adornos de inspiración retro,  con una exquisita elaboración artesanal para conseguir un efecto contemporáneo.','Marrón Chocolate', 'XS',71000);
 
+-- 8 
+
+INSERT INTO `prenda` (`id_prenda`, `id_marca`, `nombre_prenda`, `descripcion`, `color`, `talla`, `precio`) VALUES (21, 215, 'Camiseta Básica', 'Camiseta de algodón suave', 'Blanco', 'M', 102000);
+
+-- 9 
+
+INSERT INTO `prenda` (`id_prenda`, `id_marca`, `nombre_prenda`, `descripcion`, `color`, `talla`, `precio`) VALUES (34, 216, 'Blazer de Lana', 'Blazer formal de lana con corte ajustado', 'Negro', 'L', 98000);
+
+-- 10
+
+INSERT INTO `prenda` (`id_prenda`, `id_marca`, `nombre_prenda`, `descripcion`, `color`, `talla`, `precio`) VALUES (31, 217, 'Vestido de Verano', 'Vestido ligero de tirantes', 'Rojo', 'S', 68000);
+
+-- 11
+
+INSERT INTO `prenda` (`id_prenda`, `id_marca`, `nombre_prenda`, `descripcion`, `color`, `talla`, `precio`) VALUES (32, 219, 'Chaqueta de Cuero', 'Chaqueta de cuero genuino', 'Marrón', 'M', 150000);
+
+-- 12 
+
+INSERT INTO `prenda` (`id_prenda`, `id_marca`, `nombre_prenda`, `descripcion`, `color`, `talla`, `precio`) VALUES (33, 542, 'Sudadera Uniqlo', 'Sudadera con capucha de algodón', 'Gris', 'XL', 36000);
+
 
 --///------------------------------------------------------------------------------///---
 
@@ -195,6 +285,22 @@ INSERT INTO `inventario` (`id_inventario`, `id_prenda`, `id_proveedor`, `cant_en
 
 INSERT INTO `inventario` (`id_inventario`, `id_prenda`, `id_proveedor`, `cant_en_stock`, `fecha_de_recibo`) VALUES (009, 28, 8345, 52, '2024-05-03');
 
+-- 8 
+
+INSERT INTO `inventario` (`id_inventario`, `id_prenda`, `id_proveedor`, `cant_en_stock`, `fecha_de_recibo`) VALUES (010, 31, 2254, 120, '2024-04-02');
+
+-- 9
+
+INSERT INTO `inventario` (`id_inventario`, `id_prenda`, `id_proveedor`, `cant_en_stock`, `fecha_de_recibo`) VALUES (011, 32, 2498, 78, '2024-02-20');
+
+-- 10
+
+INSERT INTO `inventario` (`id_inventario`, `id_prenda`, `id_proveedor`, `cant_en_stock`, `fecha_de_recibo`) VALUES (012, 33, 3572, 102, '2024-10-20');
+
+-- 11
+
+INSERT INTO `inventario` (`id_inventario`, `id_prenda`, `id_proveedor`, `cant_en_stock`, `fecha_de_recibo`) VALUES (013, 30, 6981, 95, '2024-04-15');
+
 
 
 --///-----------------------------------------------------------------------------///---
@@ -238,8 +344,27 @@ INSERT INTO `cliente` (`id_cliente`, `nombre_cliente`, `apellidos_cliente`, `cor
 
 -- 7
 
-INSERT INTO `cliente` (`id_cliente`, `nombre_cliente`, `apellidos_cliente`, `correo`, `telefono`,`direccion` ) VALUES (70552016, 'Adrian', 'Hernandez Brenes', 'hernabrean@hotmail.com', 82352642, 'Limon, Siquirres, Florida');
+INSERT INTO `cliente` (`id_cliente`, `nombre_cliente`, `apellidos_cliente`, `correo`, `telefono`,`direccion` ) VALUES (705520160, 'Adrian', 'Hernandez Brenes', 'hernabrean@hotmail.com', 82352642, 'Limon, Siquirres, Florida');
 
+-- 8
+
+INSERT INTO `cliente` (`id_cliente`, `nombre_cliente`, `apellidos_cliente`, `correo`, `telefono`,`direccion` ) VALUES (706330596, 'Carlos', 'Pérez Rodríguez', 'carlos.perez@mail.com', 1234567890, 'Calle Mayor 10, Madrid, España');
+
+-- 9
+
+INSERT INTO `cliente` (`id_cliente`, `nombre_cliente`, `apellidos_cliente`, `correo`, `telefono`,`direccion` ) VALUES (304870585, 'María', 'López García', 'maria.lopez@mail.com', 9876543210, 'Avenida del Sol 25, Barcelona, España');
+
+-- 10 
+
+INSERT INTO `cliente` (`id_cliente`, `nombre_cliente`, `apellidos_cliente`, `correo`, `telefono`,`direccion` ) VALUES (605480529, 'Juan', 'Martínez Sánchez', 'juan.martinez@mail.com', 1122334455, 'Calle de la Luna 5, Valencia, España');
+
+-- 11 
+
+INSERT INTO `cliente` (`id_cliente`, `nombre_cliente`, `apellidos_cliente`, `correo`, `telefono`,`direccion` ) VALUES (304850548, 'Laura', 'Gómez Díaz', 'laura.gomez@mail.com', 6677889900, 'Calle del Prado 20, Bilbao, España');
+
+-- 12 
+
+INSERT INTO `cliente` (`id_cliente`, `nombre_cliente`, `apellidos_cliente`, `correo`, `telefono`,`direccion` ) VALUES (305480529, 'Carlos', 'Pérez Martínez', 'carlos.perez@gmail.com', 1234567890, 'Av. Libertador 123, Madrid');
 
 --///------------------------------------------------------------------------------///---
 
@@ -282,6 +407,26 @@ INSERT INTO `venta_final` (`id_venta`, `id_cliente`, `id_detalle_venta`, `fecha_
 -- 7
 
 INSERT INTO `venta_final` (`id_venta`, `id_cliente`, `id_detalle_venta`, `fecha_venta_final`, `total_venta` ) VALUES (1006, 70552016, 60, '2024-02-03', 1633000);
+
+-- 8
+
+INSERT INTO `venta_final` (`id_venta`, `id_cliente`, `id_detalle_venta`, `fecha_venta_final`, `total_venta` ) VALUES (1007, 305480529, 73, '2024-02-03',
+408000);
+
+-- 9
+
+INSERT INTO `venta_final` (`id_venta`, `id_cliente`, `id_detalle_venta`, `fecha_venta_final`, `total_venta` ) VALUES (1008, 304850548, 72, '2024-02-03',
+686000);
+
+-- 10
+
+INSERT INTO `venta_final` (`id_venta`, `id_cliente`, `id_detalle_venta`, `fecha_venta_final`, `total_venta` ) VALUES (1009, 605480529, 71, '2024-09-20',
+600000);
+
+-- 11
+
+INSERT INTO `venta_final` (`id_venta`, `id_cliente`, `id_detalle_venta`, `fecha_venta_final`, `total_venta` ) VALUES (1010, 304870585, 70, '2024-08-15',
+68000);
 
 
 --///------------------------------------------------------------------------------///---
@@ -326,7 +471,21 @@ INSERT INTO `Detalle_venta` (`id_detalle_venta`, `id_prenda`, `cantidad`) VALUES
 
 INSERT INTO `Detalle_venta` (`id_detalle_venta`, `id_prenda`, `cantidad`) VALUES (60, 28, 23);
 
+-- 8
 
+INSERT INTO `Detalle_venta` (`id_detalle_venta`, `id_prenda`, `cantidad`) VALUES (70, 31, 1);
+
+-- 9 
+
+INSERT INTO `Detalle_venta` (`id_detalle_venta`, `id_prenda`, `cantidad`) VALUES (71, 32, 4);
+
+-- 10 
+
+INSERT INTO `Detalle_venta` (`id_detalle_venta`, `id_prenda`, `cantidad`) VALUES (72, 30, 7);
+
+-- 11 
+
+INSERT INTO `Detalle_venta` (`id_detalle_venta`, `id_prenda`, `cantidad`) VALUES (73, 21, 4);
 
 
 --//-------------------------------------------------------------------------------///---
@@ -423,7 +582,7 @@ GROUP BY vf.fecha_venta_final, p.nombre_prenda;
 
 -- 1. LISTA DE MARCAS QUE TIENEN REGISTRO DE UNA VENTA --
 
-CREATE VIEW MarcasConVentas AS
+CREATE VIEW Marcas_Con_Ventas AS
 SELECT DISTINCT m.nombre_marca
 FROM marca m
 JOIN prenda p ON m.id_marca = p.id_marca
@@ -435,12 +594,14 @@ JOIN detalle_venta dv ON p.id_prenda = dv.id_prenda;
 
 -- 2. LISTA DE PRENDAS VENDIDAS Y CANTIDAD EN STOCK -- !!!!!!!!!
 
-CREATE VIEW PrendasVendidasYStock AS
-SELECT p.nombre_prenda, SUM(dv.cantidad) AS cantidad_vendida, i.cant_en_stock
+CREATE VIEW Prendas_Vendidas_Y_En_Stock AS
+SELECT p.nombre_prenda, SUM(d.cantidad) AS venta_total,
+(i.cant_en_stock - SUM(d.cantidad)) AS restante_en_stock, i.cant_en_stock AS cant_anterior_en_stock
 FROM prenda p
-JOIN detalle_venta dv ON p.id_prenda = dv.id_prenda
-JOIN inventario i ON p.id_prenda = i.id_prenda
+JOIN detalle_venta d ON p.id_prenda = d.id_prenda
+JOIN inventario i ON i.id_prenda = p.id_prenda
 GROUP BY p.nombre_prenda, i.cant_en_stock;
+
 
 
 //-------------------------------------------------------------------------------------//
@@ -448,7 +609,7 @@ GROUP BY p.nombre_prenda, i.cant_en_stock;
 
 -- 3. LISTA DE LAS 5 MARCAS MAS VENDIDAS Y LA CANTIDAD DE VENTAS --
 
-CREATE VIEW Top5MarcasMasVendidas AS
+CREATE VIEW Marcas_Mas_Vendidas AS
 SELECT m.nombre_marca, SUM(dv.cantidad) AS total_ventas
 FROM marca m
 JOIN prenda p ON m.id_marca = p.id_marca
@@ -456,5 +617,3 @@ JOIN detalle_venta dv ON p.id_prenda = dv.id_prenda
 GROUP BY m.nombre_marca
 ORDER BY total_ventas DESC
 LIMIT 5;
-
-
