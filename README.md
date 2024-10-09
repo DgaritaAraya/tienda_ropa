@@ -5,7 +5,7 @@
 
 **Proyecto # 1 - Tienda de Ropa**
 
-**Integrnates del Proyecto:**
+**Integrantes del Proyecto:**
 
 **Yuliana Picado Calderón - Daniela Garita Arya**
 
