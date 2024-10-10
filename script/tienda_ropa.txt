@@ -98,6 +98,14 @@ INSERT INTO `proveedor` (`id_proveedor`, `nombre_proveedor`, `direccion`, `corre
 
 INSERT INTO `proveedor` (`id_proveedor`, `nombre_proveedor`, `direccion`, `correo_proveedor`) VALUES (2501, 'Kering', '40 Rue de Sèvres, París', 'ventas@kering.com');
 
+--20
+ 
+INSERT INTO `proveedor` (`id_proveedor`, `nombre_proveedor`, `direccion`, `correo_proveedor`) VALUES (2502, 'SanLucas', '40 Rue de Sèvres, París', 'sanlucas@kering.com');
+ 
+-- 21
+ 
+INSERT INTO `proveedor` (`id_proveedor`, `nombre_proveedor`, `direccion`, `correo_proveedor`) VALUES (2503, 'SHEINCORP', '40 Rue de Sèvres, París', 'shein@corp.com');
+
 
 --///-----------------------------------------------------------------------------///---
 
@@ -551,7 +559,9 @@ ALTER TABLE `venta_final`
 
 -- 1. ELIMINACIÓN DE DATOS 
 
-DELETE FROM proveedor WHERE id_proveedor = 2638; 
+SELECT * FROM `proveedor` WHERE id_proveedor = 2502;
+
+DELETE FROM proveedor WHERE id_proveedor = 2502; 
 
 
 //-------------------------------------------------------------------------------------//
@@ -559,8 +569,9 @@ DELETE FROM proveedor WHERE id_proveedor = 2638;
 
 -- 2. ACTUALIZACION DE DATOS 
 
+SELECT * FROM `proveedor` WHERE id_proveedor = 2503;
 
-UPDATE proveedor SET direccion = 'San Roque de barba de Heredia' WHERE id_proveedor = 9043;
+UPDATE proveedor SET direccion = 'San Roque de barba de Heredia' WHERE id_proveedor = 2503;
 
 //-------------------------------------------------------------------------------------//
 
