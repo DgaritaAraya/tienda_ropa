@@ -582,7 +582,7 @@ SELECT vf.fecha_venta_final, p.nombre_prenda, SUM(dv.cantidad) AS cantidad_vendi
 FROM venta_final vf
 JOIN detalle_venta dv ON vf.id_detalle_venta = dv.id_detalle_venta
 JOIN prenda p ON dv.id_prenda = p.id_prenda
-WHERE vf.fecha_venta_final = '2023-11-29'  
+WHERE vf.fecha_venta_final = '2024-02-03'  
 GROUP BY vf.fecha_venta_final, p.nombre_prenda;
 
 
