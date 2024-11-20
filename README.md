@@ -310,7 +310,7 @@ Campos:
  ```
 ---
 
-### Tabla Detalle Venta
+## Tabla Detalle Venta
 
 #### 1. Obtener todas los registros de Detalle venta
 
@@ -413,7 +413,7 @@ http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalle_v
 {"Mensaje":"La prenda con ID 80 fue eliminada exitosamente."}
 ```
 ---
-### Tabla Inventario
+## Tabla Inventario
 
 #### 1. Obtener todas los registros de Inventario
 
@@ -512,7 +512,7 @@ http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalle_v
 {"Mensaje":"La prenda con ID 14 fue eliminada exitosamente."}
 ```
 ---
-### Tabla Marca
+## Tabla Marca
 
 #### 1. Obtener todas los registros de Marca
 
@@ -597,7 +597,7 @@ http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalle_v
 {"Mensaje":"La prenda con ID 223 fue eliminada exitosamente."}
 ```
 ---
-### Tabla Prenda
+## Tabla Prenda
 
 #### 1. Obtener todas los registros de Prenda
 
@@ -701,59 +701,184 @@ http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalle_v
 {"Mensaje":"La prenda con ID 35 fue eliminada exitosamente."}
 ```
 ---
-### Tabla Proveedor
+## Tabla Proveedor
 
 #### 1. Obtener todas los registros de Proveedor
 
 * Método: GET
 * URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/proveedor
+* Descripción: Obtiene todos los registros de Proveedor en el sistema.
+  
+#### Ejemplo de respuesta:
+```
+{
+    "Resultado": [
+        {
+            "id_proveedor": 1234,
+            "nombre_proveedor": "Proveedor Moda",
+            "direccion": "Av. Principal 123",
+            "correo_proveedor": "contacto@moda.com"
+        },
+        {
+            "id_proveedor": 1479,
+            "nombre_proveedor": "Tecorfil",
+            "direccion": " Costado oeste del salon comunal de Libe",
+            "correo_proveedor": "productos@tecorfil.cr"
+        }
+ ``` 
 
 #### 2. Obtener detalles de Proveedor por ID
 
 * Método: GET
-* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/proveedor?id_proveedor=1234
-
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/proveedor?id_proveedor=2477
+* Descripción: Obtiene un registro en específico de Proveedor por medio de un ID.
+  
+#### Ejemplo de respuesta:
+```
+{
+    "Resultado": {
+        "id_proveedor": 2477,
+        "nombre_proveedor": "Nike Inc.",
+        "direccion": "One Bowerman Dr, Beaverton",
+        "correo_proveedor": "ventas@nike.com"
+    }
+}
+``` 
 #### 3. Crear datos de Proveedor
 
 * Método: POST
 * URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/proveedor
+* Descripción: Permite crear un registro nuevo para Proveedor en el sistema.
+
+#### Ejemplo de respuesta:
+```
+{
+"id_proveedor": 2510,
+"nombre_proveedor": "Pretty Style",
+"direccion": "Avenida de la Rosa,Alajuela,Costa Rica",
+"correo_proveedor": "pretty@style.com"
+}
+ 
+{"Mensaje":"Se ingreso datos de un proveedor nuevo."}
+```
 
 #### 4. Actualizar datos de Proveedor
 
 * Método: PUT
-* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/proveedor?id_proveedor=1234
-
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/proveedor?id_proveedor=2510
+* Descripción: Permite actualizar un dato de proveedor por medio de un ID en específico.
+  
+#### Ejemplo de respuesta:
+```
+{
+"id_proveedor": 2510,
+"nombre_proveedor": "Prendas Modernas",
+"direccion": "Avenida de la Rosa,Alajuela,Costa Rica",
+"correo_proveedor": "modernas@style.com"
+}
+ 
+{"Mensaje":"La prenda con ID 2510 fue actualizada exitosamente."}
+```
 #### 5. Eliminar datos de detalles de Proveedor
 
 * Método: DELETE
-* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/proveedor?id_proveedor=1234
-
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/proveedor?id_proveedor=2510
+* Descripción: Permite eliminar un registro de Proveedor en el sistema.
+#### Ejemplo de respuesta:
+```
+{"Mensaje":"La prenda con ID 2510 fue eliminada exitosamente."}
+```
 ---
-### Tabla Venta final
+## Tabla Venta final
 
 #### 1. Obtener todas los registros de Venta final
 
 * Método: GET
 * URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/ventaFinal
+* Descripción: Obtiene todos los registros de Venta final en el sistema.
+  
+#### Ejemplo de respuesta:
+```
+{
+    "Resultado": [
+        {
+            "id_venta": 1,
+            "id_cliente": 305810963,
+            "id_detalle_venta": 20,
+            "fecha_venta_final": "2023-12-13",
+            "total_venta": "25000.000"
+        },
+        {
+            "id_venta": 1001,
+            "id_cliente": 302350969,
+            "id_detalle_venta": 10,
+            "fecha_venta_final": "2024-06-12",
+            "total_venta": "318000.000"
+        }
+```
 
 #### 2. Obtener detalles de Venta final por ID
 
 * Método: GET
 * URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/ventaFinal?id_venta=1001
+* Descripción: Obtiene un registro específico de Venta Final por medio de un ID en específico.
+#### Ejemplo de respuesta:
+```
+{
+    "Resultado": {
+        "id_venta": 1010,
+        "id_cliente": 304870585,
+        "id_detalle_venta": 70,
+        "fecha_venta_final": "2024-08-15",
+        "total_venta": "68000.000"
+    }
+}
+```
 
 #### 3. Crear datos de Venta final
 
 * Método: POST
 * URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/ventaFinal
+* Descripción: Permite crear un registro nuevo de venta final en el sistema.
+  
+#### Ejemplo de respuesta:
+```
+ {
+    "id_venta": 1011,
+    "id_cliente": 605480529,
+    "id_detalle_venta": 72,
+    "fecha_venta_final": "2024-09-20",
+    "total_venta": "78000.000"
+}
+{"Mensaje":"Se ingreso datos de una venta final nueva."}
+```
 
 #### 4. Actualizar datos de Venta final
 
 * Método: PUT
-* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/ventaFinal?id_venta=1001
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/ventaFinal?id_venta=1011
+* Descripción: Permite actualizar un registro de Venta Final por medio de un ID en específico.
 
+#### Ejemplo de respuesta:
+```
+ {
+    "id_venta": 1011,
+    "id_cliente": 605480529,
+    "id_detalle_venta": 72,
+    "fecha_venta_final": "2024-11-02",
+    "total_venta": "15000.000"
+}
+ 
+{"Mensaje":"La prenda con ID 1011 fue actualizada exitosamente."}
+```
 #### 5. Eliminar datos de detalles de Venta final
 
 * Método: DELETE
-* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/ventaFinal?id_venta=1001
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/ventaFinal?id_venta=1011
+* Descripción: Permite eliminar un regsitro de Venta final por medio de un ID en específico.
+#### Ejemplo de respuesta:
 
+``` 
+{"Mensaje":"La prenda con ID 1011 fue eliminada exitosamente."}
+```
 
