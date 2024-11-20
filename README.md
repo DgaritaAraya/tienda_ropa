@@ -7,7 +7,7 @@
 
 **Integrantes del Proyecto:**
 
-**Yuliana Picado Calderón - Daniela Garita Arya**
+**Yuliana Picado Calderón - Daniela Garita Araya**
 
 **Profesor:**
 
