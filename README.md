@@ -820,7 +820,7 @@ http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalle_v
 #### 2. Obtener detalles de Venta final por ID
 
 * Método: GET
-* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/ventaFinal?id_venta=1001
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/ventaFinal?id_venta=1010
 * Descripción: Obtiene un registro específico de Venta Final por medio de un ID en específico.
 #### Ejemplo de respuesta:
 ```
