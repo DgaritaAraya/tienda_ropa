@@ -169,7 +169,7 @@ Campos:
 ---
 
 
-### Relaciones Globales:
+## Relaciones Globales:
 
 **- Proveedor-Marca-Prenda:** Un proveedor suministra varias marcas, y cada marca tiene varias prendas.
 
@@ -197,5 +197,208 @@ Campos:
 ## Diagrama de la Base de Datos 
 
 ![image](https://github.com/user-attachments/assets/91fd59a2-f686-4eb3-9b23-38cea05157ae)
+
+---
+
+# Segundo avance
+
+## Explicación de los endpoints de la API
+
+## Tabla Cliente
+
+#### 1. Obtener todas los clientes
+
+* Método: GET
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/cliente
+
+#### 2. Obtener clientes por ID
+
+* Método: GET
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/cliente?id_cliente=203910764
+
+#### 3. Crear datos de clientes
+
+* Método: POST
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/cliente
+
+#### 4. Actualizar datos de clientes
+
+* Método: PUT
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/cliente?id_cliente=203910764
+  
+#### 5. Eliminar datos de clientes
+
+* Método:DELETE
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/cliente?id_cliente=203910764
+
+---
+
+### Tabla Detalle Venta
+
+#### 1. Obtener todas los registros de Detalle venta
+
+* Método: GET
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalleVenta
+
+#### 2. Obtener detalles de venta por ID
+
+* Método: GET
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalleVenta?id_detalle_venta=10
+
+#### 3. Crear datos de detalles de venta
+
+* Método: POST
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalleVenta
+
+#### 4. Actualizar datos de detalles de venta
+
+* Método: PUT
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalleVenta?id_detalle_venta=10
+
+#### 5. Eliminar datos de detalles de venta
+
+* Método:DELETE
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/cliente?id_detalle_venta=10
+
+---
+### Tabla Inventario
+
+#### 1. Obtener todas los registros de Inventario
+
+* Método: GET
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/inventario
+
+#### 2. Obtener detalles de Inventario por ID
+
+* Método: GET
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/inventario?id_inventario=1
+
+#### 3. Crear datos de Inventario
+
+* Método: POST
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/inventario
+
+#### 4. Actualizar datos de Inventario
+
+* Método: PUT
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/inventario?id_inventario=1
+
+#### 5. Eliminar datos de detalles de venta
+
+* Método:DELETE
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/inventario?id_inventario=1
+
+---
+### Tabla Marca
+
+#### 1. Obtener todas los registros de Marca
+
+* Método: GET
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/marca
+
+#### 2. Obtener detalles de Marca por ID
+
+* Método: GET
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/marca?id_marca=41
+
+#### 3. Crear datos de Marca
+
+* Método: POST
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/marca
+
+#### 4. Actualizar datos de Marca
+
+* Método: PUT
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/marca?id_marca=41
+
+#### 5. Eliminar datos de detalles de Marca
+
+* Método:DELETE
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/marca?id_marca=41
+
+---
+### Tabla Prenda
+
+#### 1. Obtener todas los registros de Prenda
+
+* Método: GET
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/prenda
+
+#### 2. Obtener detalles de Prenda por ID
+
+* Método: GET
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/prenda?id_prenda=12
+
+#### 3. Crear datos de Prenda
+
+* Método: POST
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/prenda
+
+#### 4. Actualizar datos de Prenda
+
+* Método: PUT
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/prenda?id_prenda=12
+
+#### 5. Eliminar datos de detalles de Prenda
+
+* Método:DELETE
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/prenda?id_prenda=12
+
+
+---
+### Tabla Proveedor
+
+#### 1. Obtener todas los registros de Proveedor
+
+* Método: GET
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/proveedor
+
+#### 2. Obtener detalles de Proveedor por ID
+
+* Método: GET
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/proveedor?id_proveedor=1234
+
+#### 3. Crear datos de Proveedor
+
+* Método: POST
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/proveedor
+
+#### 4. Actualizar datos de Proveedor
+
+* Método: PUT
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/proveedor?id_proveedor=1234
+
+#### 5. Eliminar datos de detalles de Proveedor
+
+* Método: DELETE
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/proveedor?id_proveedor=1234
+
+---
+### Tabla Venta final
+
+#### 1. Obtener todas los registros de Venta final
+
+* Método: GET
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/ventaFinal
+
+#### 2. Obtener detalles de Venta final por ID
+
+* Método: GET
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/ventaFinal?id_venta=1001
+
+#### 3. Crear datos de Venta final
+
+* Método: POST
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/ventaFinal
+
+#### 4. Actualizar datos de Venta final
+
+* Método: PUT
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/ventaFinal?id_venta=1001
+
+#### 5. Eliminar datos de detalles de Venta final
+
+* Método: DELETE
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/ventaFinal?id_venta=1001
 
 
