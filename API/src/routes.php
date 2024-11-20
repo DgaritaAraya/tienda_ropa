@@ -115,7 +115,7 @@ if ($path == "cliente") {
 
 //-- Endpoint para leer, crear, actualizar y eliminar los datos de la  tabla "Detalle_Venta" --//
 
-if ($path == "detalleVenta") {
+if ($path == "detalle_venta") {
     $detalle_ventaController = new detalle_ventaController();
     
     switch ($method) {
@@ -378,7 +378,7 @@ if ($path == "proveedor") {
 
 //-- Endpoint para leer, crear, actualizar y eliminar los datos de la  tabla "Venta_Final" --//
 
-if ($path == "ventaFinal") {
+if ($path == "venta_final") {
     $ventaController = new venta_finalController();
     
     switch ($method) {

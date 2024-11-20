@@ -13,10 +13,11 @@ class marca {
         $consulta = $this->db->connect()->query("
         SELECT 
             marca.id_marca,
-            marca.nombre_cliente,
+            marca.id_proveedor,
+            marca.nombre_marca,
             marca.pais
         FROM
-            mnarca
+            marca
         ");
         return $consulta->fetchAll();
     }
@@ -30,15 +31,19 @@ class marca {
     }
 
 //** -- Método para insertar un nuevo registro en la tabla "Marca" -- **//
-    public function insert($id_marca, $nombre_marca, $pais_origen) {
-        $consulta = $this->db->connect()->prepare("INSERT INTO marca (id_marca, nombre_marca, pais) VALUES (?, ?, ?)");
-        return $consulta->execute([$id_marca, $nombre_marca, $pais_origen]);
-    }
+
+public function insert($id_marca, $id_proveedor, $nombre_marca, $pais) {
+    $consulta = $this->db->connect()->prepare("
+        INSERT INTO marca (id_marca, id_proveedor, nombre_marca, pais)
+        VALUES (?, ?, ?, ?)
+    ");
+    return $consulta->execute([$id_marca, $id_proveedor, $nombre_marca, $pais]);
+}
 
 //** -- Método para actualizar un nuevo registro en la tabla "Marca" -- **//
-    public function update($id_marca, $nombre_marca, $pais_origen) {
-        $consulta = $this->db->connect()->prepare("UPDATE marca SET nombre_marca = ?, pais = ? WHERE id_marca = ?");
-        return $consulta->execute([$nombre_marca, $pais_origen, $id_marca]);
+    public function update($id_marca, $id_proveedo, $nombre_marca, $pais) {
+        $consulta = $this->db->connect()->prepare("UPDATE marca SET id_proveedor = ?, nombre_marca = ?, pais = ? WHERE id_marca = ?");
+        return $consulta->execute([$id_proveedo, $nombre_marca, $pais, $id_marca]);
     }
 
 //** -- Método para eliminar un registro de la tabla "Marca" por ID -- **//

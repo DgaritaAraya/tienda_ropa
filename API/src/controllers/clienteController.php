@@ -12,7 +12,7 @@ class clienteController{
         echo json_encode(["Resultado" => $modelocliente->getAll()]);
     }
 
-//** */ Funcion para obtener los registros o un registro único de la tabla "Cliente" por medio del ID"  **//
+//** -- Funcion para obtener los registros o un registro único de la tabla "Cliente" por medio del ID"  **//
     /**
      * 
      * @param int 

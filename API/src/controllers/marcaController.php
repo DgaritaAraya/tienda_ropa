@@ -28,7 +28,7 @@ class marcaController {
     public function crear() {
         $data = json_decode(file_get_contents("php://input"), true);
         
-        if (!isset($data['id_marca'], $data['nombre_marca'], $data['pais_origen'])) {
+        if (!isset($data['id_marca'], $data['id_proveedor'], $data['nombre_marca'], $data['pais'])) {
             echo json_encode(["Error" => "Datos incompletos para crear un nuevo registro de marca."]);
             return;
         }
@@ -36,8 +36,9 @@ class marcaController {
         $modelomarca = new marca();
         $resultado = $modelomarca->insert(
             $data['id_marca'],
+            $data['id_proveedor'],
             $data['nombre_marca'],
-            $data['pais_origen']
+            $data['pais']
         );
 
         if ($resultado) {
@@ -51,7 +52,7 @@ class marcaController {
     public function actualizar($id_marca) {
         $data = json_decode(file_get_contents("php://input"), true);
         
-        if (!isset($data['nombre_marca'], $data['pais_origen'])) {
+        if (!isset($data['nombre_marca'], $data['pais'])) {
             echo json_encode(["Error" => "Datos incompletos para actualizar la marca."]);
             return;
         }
@@ -59,8 +60,9 @@ class marcaController {
         $modelomarca = new marca();
         $resultado = $modelomarca->update(
             $id_marca,
+            $data['id_proveedor'],
             $data['nombre_marca'],
-            $data['pais_origen']
+            $data['pais']
         );
 
         if ($resultado) {
