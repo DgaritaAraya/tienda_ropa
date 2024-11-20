@@ -881,4 +881,155 @@ http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalle_v
 ``` 
 {"Mensaje":"La prenda con ID 1011 fue eliminada exitosamente."}
 ```
+---
 
+# Explicación de las Vistas
+
+#### 1. VISTA MARCA CON VENTAS
+
+* Método: GET
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/marcas_ventas
+* Descripción: Enlista todas las marcas que tienen al menos una venta.
+  
+#### Ejemplo de respuesta:
+```
+{
+    "Resultado": [
+        {
+            "nombre_marca": "Adidas"
+        },
+        {
+            "nombre_marca": "Zara"
+        },
+        {
+            "nombre_marca": "Prada"
+        },
+        {
+            "nombre_marca": "Burberry"
+        },
+        {
+            "nombre_marca": "H&M"
+        },
+        {
+            "nombre_marca": "Louis Vuitton"
+        },
+        {
+            "nombre_marca": "Nike"
+        },
+        {
+            "nombre_marca": "Levis"
+        },
+        {
+            "nombre_marca": "Uniqlo"
+        }
+    ]
+}
+ ``` 
+
+#### 2. VISTA PRENDAS VENDIDAS Y EN STOCK  
+
+* Método: GET
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/proveedor?id_proveedor=2477](http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/prendas_vendidas_stock
+* Descripción: Muestra las prendas vendidas junto con la cantidad restante en stock.
+  
+#### Ejemplo de respuesta:
+```
+{
+    "Resultado": [
+        {
+            "nombre_prenda": "Camisa de Vestir",
+            "venta_total": "12",
+            "restante_en_stock": "83",
+            "cant_anterior_en_stock": 95
+        },
+        {
+            "nombre_prenda": "Camisa de Vestir",
+            "venta_total": "12",
+            "restante_en_stock": "88",
+            "cant_anterior_en_stock": 100
+        },
+        {
+            "nombre_prenda": "Camison Overside",
+            "venta_total": "15",
+            "restante_en_stock": "-11",
+            "cant_anterior_en_stock": 4
+        },
+        {
+            "nombre_prenda": "Chaqueta de Cuero",
+            "venta_total": "4",
+            "restante_en_stock": "74",
+            "cant_anterior_en_stock": 78
+        },
+        {
+            "nombre_prenda": "Chaqueta en mezcla de lana",
+            "venta_total": "2",
+            "restante_en_stock": "18",
+            "cant_anterior_en_stock": 20
+        },
+        {
+            "nombre_prenda": "Jeans 501",
+            "venta_total": "3",
+            "restante_en_stock": "36",
+            "cant_anterior_en_stock": 39
+        },
+        {
+            "nombre_prenda": "Nike x Jacquemus",
+            "venta_total": "8",
+            "restante_en_stock": "0",
+            "cant_anterior_en_stock": 8
+        },
+        {
+            "nombre_prenda": "Pantalón Deportivo SST Bonded",
+            "venta_total": "25",
+            "restante_en_stock": "32",
+            "cant_anterior_en_stock": 57
+        },
+        {
+            "nombre_prenda": "Vestido de georgette bordado",
+            "venta_total": "23",
+            "restante_en_stock": "29",
+            "cant_anterior_en_stock": 52
+        },
+        {
+            "nombre_prenda": "Vestido de Verano",
+            "venta_total": "1",
+            "restante_en_stock": "119",
+            "cant_anterior_en_stock": 120
+        }
+    ]
+}
+``` 
+#### 3. VISTA MARCAS MAS VENDIDAS  
+
+* Método: GET
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/marcas_mas_vendidas
+* Descripción: Enlista las 5 marcas más vendidas, mostrando la cantidad de ventas de cada una.
+
+#### Ejemplo de respuesta:
+```
+{
+    "Resultado": [
+        {
+            "nombre_marca": "Adidas",
+            "total_ventas": "25"
+        },
+        {
+            "nombre_marca": "Prada",
+            "total_ventas": "23"
+        },
+        {
+            "nombre_marca": "Uniqlo",
+            "total_ventas": "15"
+        },
+        {
+            "nombre_marca": "Burberry",
+            "total_ventas": "12"
+        },
+        {
+            "nombre_marca": "Nike",
+            "total_ventas": "8"
+        }
+    ]
+}
+```
+---
