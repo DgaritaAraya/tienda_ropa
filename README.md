@@ -930,7 +930,7 @@ http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalle_v
 #### 2. VISTA PRENDAS VENDIDAS Y EN STOCK  
 
 * Método: GET
-* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/proveedor?id_proveedor=2477](http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/prendas_vendidas_stock
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/prendas_vendidas_stock
 * Descripción: Muestra las prendas vendidas junto con la cantidad restante en stock.
   
 #### Ejemplo de respuesta:
