@@ -228,7 +228,7 @@ Campos:
   
 #### 5. Eliminar datos de clientes
 
-* Método:DELETE
+* Método: DELETE
 * URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/cliente?id_cliente=203910764
 
 ---
@@ -257,7 +257,7 @@ Campos:
 
 #### 5. Eliminar datos de detalles de venta
 
-* Método:DELETE
+* Método: DELETE
 * URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/cliente?id_detalle_venta=10
 
 ---
@@ -313,7 +313,7 @@ Campos:
 
 #### 5. Eliminar datos de detalles de Marca
 
-* Método:DELETE
+* Método: DELETE
 * URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/marca?id_marca=41
 
 ---
@@ -341,7 +341,7 @@ Campos:
 
 #### 5. Eliminar datos de detalles de Prenda
 
-* Método:DELETE
+* Método: DELETE
 * URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/prenda?id_prenda=12
 
 
