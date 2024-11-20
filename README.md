@@ -445,7 +445,7 @@ http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalle_v
 #### 2. Obtener detalles de Inventario por ID
 
 * Método: GET
-* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/inventario?id_inventario=1
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/inventario?id_inventario=13
 * Descripción: Obtiene una lista de todos los datos de inventario por ID  disponibles en el sistema.
   
 #### Ejemplo de respuesta:
@@ -505,7 +505,7 @@ http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalle_v
 #### 5. Eliminar datos de detalles de venta
 
 * Método:DELETE
-* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/inventario?id_inventario=1
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/inventario?id_inventario=14
 * Descripción: Eliminar un dato de Inventario por medio de un ID en el sistema.
 #### Ejemplo de respuesta:
 
@@ -540,7 +540,7 @@ http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalle_v
 #### 2. Obtener detalles de Marca por ID
 
 * Método: GET
-* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/marca?id_marca=41
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/marca?id_marca=218
 * Descripción: Obtiene el registro de una marca por medio de un ID.
  #### Ejemplo de respuesta:
 
@@ -586,7 +586,7 @@ http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalle_v
   "pais": "Colombia"
 }
  
-{"Mensaje":"La prenda con ID 14 fue actualizada exitosamente."}
+{"Mensaje":"La prenda con ID 223 fue actualizada exitosamente."}
 ``` 
 #### 5. Eliminar datos de detalles de Marca
 
