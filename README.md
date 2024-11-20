@@ -315,7 +315,7 @@ Campos:
 #### 1. Obtener todas los registros de Detalle venta
 
 * Método: GET
-* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalleVenta
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalle_venta
 * Descripción: Obtiene una lista de todos los detalles de venta disponibles en el sistema.
   
 #### Ejemplo de respuesta:
@@ -342,7 +342,7 @@ Campos:
 #### 2. Obtener detalles de venta por ID
 
 * Método: GET
-* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalleVenta?id_detalle_venta=10
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalle_venta?id_detalle_venta=10
 * Descripción: Obtiene una lista de todos los detalles de venta por ID  disponibles en el sistema.
   
 #### Ejemplo de respuesta:
@@ -362,7 +362,7 @@ http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalle_v
 #### 3. Crear datos de detalles de venta
 
 * Método: POST
-* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalleVenta
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalle_venta
 * Descripción: Crear un registro de detalle venta en el sistema.
 
 #### Ejemplo de respuesta:
@@ -376,13 +376,14 @@ http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalle_v
         "id_prenda": 32,
         "cantidad": 10
     }
+
 {"Mensaje":"Se ingreso datos de un detalle de venta nuevo."}
 ```
 
 #### 4. Actualizar datos de detalles de venta
 
 * Método: PUT
-* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalleVenta?id_detalle_venta=80
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalle_venta?id_detalle_venta=80
 * Descripción: Actualizar un registro de detalle venta en el sistema.
   
 #### Ejemplo de respuesta:
@@ -794,7 +795,7 @@ http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalle_v
 #### 1. Obtener todas los registros de Venta final
 
 * Método: GET
-* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/ventaFinal
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/venta_final
 * Descripción: Obtiene todos los registros de Venta final en el sistema.
   
 #### Ejemplo de respuesta:
@@ -820,7 +821,7 @@ http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalle_v
 #### 2. Obtener detalles de Venta final por ID
 
 * Método: GET
-* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/ventaFinal?id_venta=1010
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/venta_final?id_venta=1010
 * Descripción: Obtiene un registro específico de Venta Final por medio de un ID en específico.
 #### Ejemplo de respuesta:
 ```
@@ -838,7 +839,7 @@ http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalle_v
 #### 3. Crear datos de Venta final
 
 * Método: POST
-* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/ventaFinal
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/venta_final
 * Descripción: Permite crear un registro nuevo de venta final en el sistema.
   
 #### Ejemplo de respuesta:
@@ -856,7 +857,7 @@ http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalle_v
 #### 4. Actualizar datos de Venta final
 
 * Método: PUT
-* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/ventaFinal?id_venta=1011
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/venta_final?id_venta=1011
 * Descripción: Permite actualizar un registro de Venta Final por medio de un ID en específico.
 
 #### Ejemplo de respuesta:
@@ -869,17 +870,17 @@ http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalle_v
     "total_venta": "15000.000"
 }
  
-{"Mensaje":"La prenda con ID 1011 fue actualizada exitosamente."}
+{"Mensaje":"La venta con ID 1011 fue actualizada exitosamente."}
 ```
 #### 5. Eliminar datos de detalles de Venta final
 
 * Método: DELETE
-* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/ventaFinal?id_venta=1011
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/venta_final?id_venta=1011
 * Descripción: Permite eliminar un regsitro de Venta final por medio de un ID en específico.
 #### Ejemplo de respuesta:
 
 ``` 
-{"Mensaje":"La prenda con ID 1011 fue eliminada exitosamente."}
+{"Mensaje":"La venta con ID 1011 fue eliminada exitosamente."}
 ```
 ---
 
