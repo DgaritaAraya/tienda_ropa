@@ -402,7 +402,7 @@ http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalle_v
 #### 5. Eliminar datos de detalles de venta
 
 * Método: DELETE
-* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/cliente?id_detalle_venta=80
+* URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalle_venta?id_detalle_venta=80
 * Descripción: Eliminar un registro de la tabla detalle_venta por medio de un ID.
 #### Ejemplo de respuesta:
 
