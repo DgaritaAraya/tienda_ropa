@@ -502,7 +502,7 @@ http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/detalle_v
 }
 ```
 
-#### 5. Eliminar datos de detalles de venta
+#### 5. Eliminar datos de Inventario
 
 * Método:DELETE
 * URL: http://localhost/plataformas_abiertas/tienda_ropa/API/public/index.php/inventario?id_inventario=14
